@@ -57,20 +57,20 @@ model = SopranoTTS(backend='auto', device='cuda', cache_size_mb=10, decoder_batc
 ### Basic inference
 
 ```python
-out = model.infer("Hello world!") # can achieve 2000x real-time with sufficiently long input!
+out = model.infer("Soprano is an extremely lightweight text to speech model.") # can achieve 2000x real-time with sufficiently long input!
 ```
 
 ### Save output to a file
 
 ```python
-out = model.infer("Hello world!", "out.wav")
+out = model.infer("Soprano is an extremely lightweight text to speech model.", "out.wav")
 ```
 
 ### Custom sampling parameters
 
 ```python
 out = model.infer(
-    "Hello world!",
+    "Soprano is an extremely lightweight text to speech model.",
     temperature=0.3,
     top_p=0.95,
     repetition_penalty=1.2,
@@ -80,13 +80,13 @@ out = model.infer(
 ### Batched inference
 
 ```python
-out = model.infer_batch(["Hello world!"] * 10) # can achieve 2000x real-time with sufficiently large input size!
+out = model.infer_batch(["Soprano is an extremely lightweight text to speech model."] * 10) # can achieve 2000x real-time with sufficiently large input size!
 ```
 
 #### Save batch outputs to a directory
 
 ```python
-out = model.infer_batch(["Hello world!"] * 10, "/dir")
+out = model.infer_batch(["Soprano is an extremely lightweight text to speech model."] * 10, "/dir")
 ```
 
 ### Streaming inference
@@ -94,7 +94,7 @@ out = model.infer_batch(["Hello world!"] * 10, "/dir")
 ```python
 import torch
 
-stream = model.infer_stream("Hello world!", chunk_size=1)
+stream = model.infer_stream("Soprano is an extremely lightweight text to speech model.", chunk_size=1)
 
 # Audio chunks can be accessed via an iterator
 chunks = []
