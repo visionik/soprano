@@ -31,3 +31,6 @@ license = {file = "LICENSE"}
 [project.urls]
 Homepage = "https://github.com/ekwek1/soprano"
 Issues = "https://github.com/ekwek1/soprano/issues"
+
+[project.scripts]
+soprano = "soprano.soprano_cli:main"
