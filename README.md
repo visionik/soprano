@@ -50,7 +50,7 @@ pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cu126
 ```python
 from soprano import SopranoTTS
 
-model = SopranoTTS(backend='auto', device='cuda', cache_size_mb=10, decoder_batch_size=1)
+model = SopranoTTS(backend='auto', device='cuda', cache_size_mb=100, decoder_batch_size=1)
 ```
 
 > **Tip**: You can increase cache_size_mb and decoder_batch_size to increase inference speed at the cost of higher memory usage.

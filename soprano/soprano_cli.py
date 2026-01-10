@@ -16,7 +16,7 @@ def main():
     parser.add_argument('--backend', '-b', default='auto', 
                        choices=['auto', 'transformers', 'lmdeploy'],
                        help='Backend to use for inference')
-    parser.add_argument('--cache-size', '-c', type=int, default=10,
+    parser.add_argument('--cache-size', '-c', type=int, default=100,
                        help='Cache size in MB (for lmdeploy backend)')
     
     args = parser.parse_args()
